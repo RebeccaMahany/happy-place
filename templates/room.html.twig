@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <section id="room">
+        <h1>You're in {{ roomName }}.</h1>
+        <p>
+            {{ roomDescription }}
+        </p>
+    </section>
+    <section id="action-result">
+    </section>
+    <section id="take-action">
+        <form id="room-action" action="" method="POST">
+            <label for="name">What would you like to do, {{ name }}?</label>
+            <input type="text" id="action" name="action" required>
+            <input type="submit" value="Submit.">
+        </form>
+    </section>
+    <section>
+        <a href="/happy-place/introduction">Go back to introduction.</a>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('room') }}
+{% endblock %}

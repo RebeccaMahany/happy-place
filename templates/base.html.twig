@@ -2,11 +2,27 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}happy place{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
+
     <body>
-        {% block body %}{% endblock %}
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+
+        <footer>
+            <section>
+                <p>♡ ♡ ♡</p>
+                <address>
+                    Email <a href="mailto:rebeccamahany@gmail.com">me</a>
+                    or <a href="https://github.com/RebeccaMahany/happy-place/issues">open an issue</a>.
+                </address>
+            </section>
+        </footer>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>

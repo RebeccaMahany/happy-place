@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <section>
+        <h1>Well, here we are.</h1>
+        <p>
+            Welcome.
+        </p>
+        <p>
+            If you'd like, let me know what your name is.
+        </p>
+        <form action="/happy-place/introduction" method="POST">
+            <label for="name">What's your name?</label>
+            <input type="text" id="name" name="name" required>
+            <input type="submit" value="Introduce yourself.">
+        </form>
+    </section>
+    <section>
+        <a href="/happy-place/introduction">Skip.</a>
+    </section>
+{% endblock %}
